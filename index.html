@@ -1,0 +1,847 @@
+		<!DOCTYPE html>
+		<html lang="fa" dir="rtl">
+		<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+		<title>اشتراکتون</title>
+		<style>
+		body {
+		margin: 0;
+		padding: 0;
+		font-family: "Vazirmatn", Arial, sans-serif;	
+		background-color: rgba(0, 0, 0, 1.4);
+		}
+
+		.container {
+		width: 60%;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		padding: 20px;
+		box-sizing: border-box;
+		border-radius: 16px;
+		background-color: rgba(40, 43, 48, 0.7);
+		direction: rtl;
+		text-align: right; 
+		color:#d0d3d4;
+		border-bottom:4px solid rgba(208, 211, 212, 0.5);
+
+		}
+
+		.content {
+		flex-grow: 0; 
+		width: 100%; 
+		display: block; 
+		text-align: left;
+		margin-bottom: 20px; 
+		direction: rtl; 
+		text-align: right; 
+		}
+
+		
+		@media (max-width: 768px) {
+		.container {
+		width: 90%;
+		}
+		
+		}
+		.box {
+            background-color: rgba(11, 83, 69, 0.6);
+            width: 49%;
+			height:100px;
+			direction: rtl;			
+            border-radius: 14px;
+			margin-top:6px;
+			display: flex;
+            justify-content: center;
+			
+            align-items: center;
+			text-align: center;
+            flex-direction: column;
+        }
+
+		.popup-video {
+		width: 90%;
+		}
+
+		.nav {
+		display: flex;
+		justify-content: space-around;
+		padding: 12px 0;
+		border-top: 1px dashed rgba(208, 211, 212, 0.5);
+		
+		
+		}
+
+		.nav-item {
+		text-align: center;
+		
+		
+		}
+
+
+		
+		.nav svg {
+		width: 40px;
+		height: 40px;
+		cursor: pointer;
+		fill: #0b5345;
+		background: #d0d3d4;
+		padding: 8px;
+		border-radius: 50%;
+		transition: all 0.8s cubic-bezier(.6,-0.28,.74,.05);
+		
+		
+
+		}
+
+		
+		.nav svg.active {
+		fill: #fff;
+		background: #218c74;
+		border-radius: 30%;
+		padding: 4px;
+		width: 50px;
+		height: 50px;
+		margin-top:-150px;
+	
+	
+		}
+
+		.nav svg:hover {
+		fill: #fff;
+		}
+
+		
+		.nav-item div {
+		display: block;
+		margin-top: 8px;
+		color: #d0d3d4;
+		font-size: 14px;
+		
+		
+		}
+
+		
+		.nav-item svg.active + div {
+		display: none;
+	
+		}
+
+		.line-separate {
+		margin-bottom: 15px; 
+		}
+		.fixed-box {
+		background-color: rgba(80, 84, 89, 0.5);
+		padding: 10px;
+		border-radius: 10px;
+		border-top: 3px solid rgba(255, 255, 255, 0.2);
+		margin: 10px auto;
+		width: 95%;
+		font-size: 15px;
+		color: #fff;
+		text-align:center;
+		align-items: center;
+		
+		}
+		.fixed-box2 {
+
+		justify-content: space-between; 
+		align-items: center; 
+		background-color: rgba(0, 0, 0, 0.5);
+		padding: 10px;
+		border-radius: 10px;
+		margin: 10px auto;
+		margin-bottom: 10px;
+		width: 95%;
+		font-size: 15px;
+		color: #fff;
+		opacity: 0.8;
+		
+		}
+
+
+		.fixed-box svg {
+		width: 25px;
+		height: 25px;
+		cursor: pointer;
+
+		background: #d0d3d4;
+		padding: 8px;
+		border-radius: 50%;
+		transition: all 0.5s cubic-bezier(.6,-0.28,.74,.05);
+		}
+		
+		.custom-hr {
+		height: 1px;
+		width: 50%;
+		background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+		border: 0;
+		margin: 10px auto; 
+		}
+
+		h2 {
+		color:#218c74;
+		letter-spacing: 0.1em;
+		}
+		hr {
+		border: 0;
+		border-top: 1px dashed #fff;
+		
+		width: 50%;
+
+		}
+
+		button {
+		font-family: "Vazirmatn",Arial, sans-serif;
+		padding: 15px 30px;
+		width:100%;
+		margin: 10px auto;
+		border: none;
+		border-radius: 8px;
+		background-color: rgba(11, 83, 69, 0.5);
+		color: white;
+		font-size: 15px;
+		cursor: pointer;
+		transition: background-color 0.3s;
+		}
+		button:hover {
+		background-color: #000;
+		}
+		
+			.button-2 {
+		font-family: "Vazirmatn",Arial, sans-serif;
+		padding: 15px 30px;
+		width:100%;
+		margin: 10px auto;
+		border: none;
+		border-radius: 8px;
+		background-color: #cb4335;
+		color: white;
+		font-size: 15px;
+		cursor: pointer;
+		transition: background-color 0.3s;
+		}
+		button:hover {
+		background-color: #000;
+		}
+		 #POPUPER {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            border-radius: 10px;
+        }
+        #POPUPER.active {
+            display: block;
+        }
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        #overlay.active {
+            display: block;
+        }
+		.box b {
+            display: block;
+            margin-top: 10px; 
+        }
+		
+		#hoshdar {
+		display: none;
+		position: fixed;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: rgba(51, 51, 51, 0.9);
+		color: white;
+		padding: 15px 30px;
+		font-size: 16px;
+		border-radius: 8px;
+		box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+		z-index: 1000;
+		transition: opacity 0.5s ease, transform 0.5s ease;
+		opacity: 0;
+		}
+
+		#hoshdar.show {
+		opacity: 1;
+		transform: translateX(-50%) translateY(0);
+		}
+
+     .progress-container {
+            width: 130px;
+            height: 10px;
+            background-color: #d0d3d4;
+            border-radius: 3px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: #cb4335;
+            border-radius: 3px;
+            width: 0;
+			transition: width 3s ease; 
+        }
+
+        .percentage {
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+		</style>
+		
+		</head>
+		<body>
+		<br><br>
+		<div id="overlay" onclick="closePopuper()"></div>
+
+	<div id="POPUPER">
+    <p>اعتبار شما تمام شده است ، درخواست شارژ اظطراری ارسال کنید.</p>
+    <button onclick="sendTelegramRequest()">ارسال درخواست</button>
+    <button onclick="closePopuper()">بستن</button>
+	</div>
+
+		<div class="container">
+		<div class="content" id="content-box">
+		
+	
+		
+		<p>کاربر محترم به بخش مدیریت اشتراک خود خوش آمدید .<p>
+
+		<h2 style="font-size:19px; background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 63%, rgba(0,0,0,1) 64%, rgba(255,255,255,0) 100%); "> با استفاده از منوی پایین بخش مورد نظر خود را انتخاب کنید </h2>
+		<p>سپس طبق راهنمایی های موجود در بخش ، عملیات دلخواه خود را انجام دهید</p>
+		
+		<div style="display: flex;justify-content: space-between;width: 100%;">
+		<div class="box">نام کاربر : <b>{{ user.username }}</b></div>
+		<div class="box">حجم اشتراک : <b>{% if not user.data_limit %}∞{% else %}{{ user.data_limit | bytesformat }}{% endif %}</b></div>
+		</div>
+		<div style="display: flex;justify-content: space-between;width: 100%;">
+		<div class="box">حجم مصرف شده : <b>  <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+    <div class="percentage" id="percentage">0%</div></b></div>
+		<div class="box">زمان اتمام : <b>  {% if not user.expire %} ∞ {% else %} {% set current_timestamp = now().timestamp() %} {% set remaining_days = ((user.expire - current_timestamp) // (24 * 3600)) %} {{ remaining_days | int }} روز دیگر {% endif %}</b></div>
+	
+		</div>
+
+
+
+		</div>
+		<div class="nav">
+		<div class="nav-item">
+		<svg id="icon1" width="40px" height="40px" viewBox="0 0 24 24" fill="none" onclick="changeContent(1)" xmlns="http://www.w3.org/2000/svg">
+		<circle cx="12" cy="6" r="4" stroke-width="1.5"></circle>
+		<path d="M19.9975 18C20 17.8358 20 17.669 20 17.5C20 15.0147 16.4183 13 12 13C7.58172 13 4 15.0147 4 17.5C4 19.9853 4 22 12 22C14.231 22 15.8398 21.8433 17 21.5634" stroke-width="1.5" stroke-linecap="round"></path>
+		</svg>
+		<div><b>جزئیات اشتراک</b></div>
+		</div>
+		<div class="nav-item">
+		<svg id="icon2" width="40px" height="40px" viewBox="0 0 256 256" fill="none" onclick="changeContent(2)" xmlns="http://www.w3.org/2000/svg" stroke="#000000">
+		<path d="M207.05811,88.666q-1.10724-1.103-2.24146-2.16895l24.84009-24.84033a7.99984,7.99984,0,0,0-11.31348-11.31348L192.3728,76.3135a111.42105,111.42105,0,0,0-128.55444.19092L37.65674,50.34328A7.99984,7.99984,0,0,0,26.34326,61.65676L51.40283,86.71633A113.38256,113.38256,0,0,0,16,169.12893V192a16.01833,16.01833,0,0,0,16,16H224a16.01833,16.01833,0,0,0,16-16V168A111.25215,111.25215,0,0,0,207.05811,88.666ZM92,168a12,12,0,1,1,12-12A12,12,0,0,1,92,168Zm72,0a12,12,0,1,1,12-12A12,12,0,0,1,164,168Z"></path>
+		</svg>
+		<div><b>راهنمای اندروید</b></div>
+		</div>
+		<div class="nav-item">
+		<svg id="icon3" version="1.1" onclick="changeContent(3)" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="40px" viewBox="0 0 512 512" xml:space="preserve">
+		<path d="M248.644,123.476c-5.45-29.71,8.598-60.285,25.516-80.89 c18.645-22.735,50.642-40.17,77.986-42.086c4.619,31.149-8.093,61.498-24.826,82.965 C309.37,106.527,278.508,124.411,248.644,123.476z M409.034,231.131c8.461-23.606,25.223-44.845,51.227-59.175 c-26.278-32.792-63.173-51.83-97.99-51.83c-46.065,0-65.542,21.947-97.538,21.947c-32.96,0-57.965-21.947-97.866-21.947 c-39.127,0-80.776,23.848-107.19,64.577c-9.712,15.055-16.291,33.758-19.879,54.59c-9.956,58.439,4.916,134.557,49.279,202.144 c21.57,32.796,50.321,69.737,87.881,70.059c33.459,0.327,42.951-21.392,88.246-21.616c45.362-0.258,53.959,21.841,87.372,21.522 c37.571-0.317,67.906-41.199,89.476-73.991c15.359-23.532,21.167-35.418,33.11-62.023 C414.435,352.487,389.459,285.571,409.034,231.131z"></path>
+		</svg>
+		<div><b>راهنمای آیفون</b></div>
+		</div>
+		<div class="nav-item">
+
+		<svg id="icon4"width="40px" height="40px" onclick="changeContent(4)" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M1863.53 1016.437c31.171 0 56.47 25.299 56.47 56.47v790.589c0 16.376-7.115 31.849-19.313 42.465-10.39 9.149-23.605 14.005-37.158 14.005-2.484 0-5.082-.113-7.567-.452l-903.53-123.331c-28.008-3.84-48.903-27.784-48.903-56.02v-667.256c0-31.171 25.3-56.47 56.471-56.47Zm-1129.412 0c31.171 0 56.47 25.299 56.47 56.47v634.504c0 16.376-7.115 31.85-19.426 42.579-10.39 9.035-23.491 13.891-37.044 13.891-2.485 0-5.196-.113-7.68-.564L48.79 1669.35C20.78 1665.51 0 1641.68 0 1613.444v-540.537c0-31.171 25.299-56.47 56.47-56.47Zm-7.726-859.855c16.151-2.372 32.415 2.597 44.725 13.327 12.424 10.73 19.426 26.315 19.426 42.579V846.99c0 31.285-25.186 56.47-56.47 56.47H56.424c-31.171 0-56.47-25.185-56.47-56.47V306.455c0-28.123 20.781-52.066 48.79-55.906ZM1855.974.474c16.15-2.033 32.414 2.71 44.724 13.44 12.198 10.73 19.313 26.203 19.313 42.466v790.588c0 31.285-25.299 56.471-56.47 56.471H960.01c-31.171 0-56.47-25.186-56.47-56.47V179.711c0-28.235 20.78-52.066 48.903-55.906Z" fill-rule="evenodd"></path> </g></svg>
+
+		<div><b>راهنمای ویندوز</b></div>
+		</div>
+
+		<div id="popup" style="display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(0, 0, 0, 0.8); padding: 20px; border-radius: 10px; z-index: 1000;">
+		<video id="popup-video"  controls></video>
+		<br>
+		<button onclick="closePopup()" style="background-color:#000;">بستن</button>
+		</div>
+		<div id="popup" style="display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(0, 0, 0, 0.8); padding: 20px; border-radius: 10px; z-index: 1000; text-align: center;">
+		<div id="qrcode"></div>
+		<br>
+		<button onclick="closePopup()">بستن</button>
+		</div>
+		</div>
+		</div>
+		<br><br>
+		</div>
+
+		<script>
+		const icons = document.querySelectorAll('.nav svg');
+
+
+		
+		function getUserDetailsContent() {
+		return `
+		<h2 style=" background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 63%, rgba(0,0,0,1) 64%, rgba(255,255,255,0) 100%); ">مشخصات کاربری</h2>
+		<div class="fixed-box">
+		<p>
+
+		نام کاربر :   {{ user.username }}</p>
+		<div class="custom-hr"></div>
+
+
+		<p>
+
+
+		وضعیت اشتراک: {{ user.status.value }}</p>
+		<div class="custom-hr"></div>
+		<p>
+
+
+		حجم اولیه شما :
+		{% if not user.data_limit %}∞{% else %}{{ user.data_limit | bytesformat }}{% endif %}
+		</p>
+		<div class="custom-hr"></div>
+		<p>
+
+
+		حجم باقی مانده شما : {% if not user.data_limit %}
+		∞
+		{% elif (user.data_limit - user.used_traffic) >= 0 %}
+		{{ (user.data_limit - user.used_traffic) | bytesformat }}
+		{% else %}
+		0
+		{% endif %}
+		</p>
+		<div class="custom-hr"></div>
+		<p>
+
+
+		حجم مصرف شده :  {{ (user.used_traffic) | bytesformat }}
+		</p>
+		<div class="custom-hr"></div>
+		<p>
+
+
+		زمان باقی مانده :       {% if not user.expire %} ∞ {% else %} {% set current_timestamp = now().timestamp() %} {% set remaining_days = ((user.expire - current_timestamp) // (24 * 3600)) %} {{ remaining_days | int }} روز {% endif %}
+		</p>
+		<div class="custom-hr"></div>
+		<p>
+
+
+		آخرین بروزرسانی اشتراک :   {{ user.sub_updated_at }}
+		</p>
+		<div class="custom-hr"></div>
+		<p>
+
+
+		آخرین تاریخ اتصال  :  {{ user.online_at }}
+		</p>
+		</div>
+		<div id="popup" style="display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(0, 0, 0, 0.8); padding: 20px; border-radius: 10px; z-index: 1000; text-align: center;">
+		<div id="qrcode"></div>
+		<br>
+		<button onclick="saveQrCode()">ذخیره QR کد</button>
+		<button onclick="closePopup()">بستن</button>
+		</div>
+		<div style="display: flex;flex-direction: column;justify-content: flex-start;">
+		<button onclick="copyAllConfigs()" style="width: 98%;opacity: 0.85;">کپی تمام کانفیگ ها</button>
+		<button onclick="copySubscriptionLink()" style="width: 98%;opacity: 0.85;">کپی لینک اشتراک</button>
+		<button onclick="showQrCodePopup()" style="width: 98%;opacity: 0.85;">نمایش QR-Code اشتراک</button>
+		</div>
+		<div id="hoshdar">پیام هشدار اینجا نمایش داده می‌شود</div>
+		<br>
+		`;
+		}
+
+		function getAndroidGuideContent() {
+		return `
+		<h2 style=" background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 63%, rgba(0,0,0,1) 64%, rgba(255,255,255,0) 100%); ">راهنمای اندروید</h2>
+
+		<div class="fixed-box">
+		<p style="text-align:right;margin-right:10px;letter-spacing: 0.087em;">
+		1 - ابتدا روی دکمه دانلود ، برنامه مورد نظر خود کلیک کنید
+		</p>
+		<p style="text-align:right;margin-right:10px;letter-spacing: 0.087em;">   2 - سپس روی  <b style="color:#cb4335;font-size:17px;">افزودن لینک هوشمند </b>برنامه ای که نصب کرده اید کلیک کنید   </p>
+		 
+		</div>
+		<br>
+		<div class="fixed-box2">
+
+		<button class="button-2" onclick="javascript:location.href='https://github.com/2dust/v2rayNG/releases/download/1.9.7/v2rayNG_1.9.7_universal.apk'"> دانلود برنامه V2rayNG ( پیشنهاد ما )</button>
+		<button onclick="javascript:location.href='v2rayng://install-sub?url={{ user.subscription_url }}&name=Marz'"> افزودن لینک هوشمند</button>
+		<button style="padding:10px 0 0;" onclick="showPopup('path/to/video1.mp4')">
+		<svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M11.25 2C9.88382 2.00133 8.73117 2.01015 7.75 2.0685V6.24976H11.25V2Z" fill="#ffffff"></path> <path d="M6.25 2.2214C5.02727 2.41566 4.1485 2.78019 3.46447 3.46423C2.78043 4.14826 2.4159 5.02703 2.22164 6.24976H6.25V2.2214Z" fill="#ffffff"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M2 11.9998C2 10.2993 2 8.90556 2.06874 7.74976L21.9313 7.74976C22 8.90556 22 10.2993 22 11.9998C22 13.7002 22 15.094 21.9313 16.2498L2.06874 16.2498C2 15.094 2 13.7002 2 11.9998ZM12.4112 10.4043C13.4704 11.1162 14 11.4722 14 12C14 12.5278 13.4704 12.8838 12.4112 13.5957C11.3375 14.3173 10.8006 14.6781 10.4003 14.4132C10 14.1483 10 13.4322 10 12C10 10.5678 10 9.85174 10.4003 9.58682C10.8006 9.3219 11.3375 9.68271 12.4112 10.4043Z" fill="#ffffff"></path> <path d="M21.7784 6.24976C21.5841 5.02703 21.2196 4.14826 20.5355 3.46423C19.8515 2.78019 18.9727 2.41566 17.75 2.2214V6.24976H21.7784Z" fill="#ffffff"></path> <path d="M12.75 2C14.1162 2.00133 15.2688 2.01015 16.25 2.0685V6.24976H12.75V2Z" fill="#ffffff"></path> <path d="M21.7784 17.7498H17.75V21.7781C18.9727 21.5839 19.8515 21.2193 20.5355 20.5353C21.2196 19.8513 21.5841 18.9725 21.7784 17.7498Z" fill="#ffffff"></path> <path d="M16.25 17.7498V21.931C15.2688 21.9894 14.1162 21.9982 12.75 21.9995V17.7498H16.25Z" fill="#ffffff"></path> <path d="M11.25 21.9995V17.7498H7.75L7.75 21.931C8.73117 21.9894 9.88382 21.9982 11.25 21.9995Z" fill="#ffffff"></path> <path d="M6.25 17.7498L6.25 21.7781C5.02727 21.5839 4.1485 21.2193 3.46447 20.5353C2.78043 19.8513 2.4159 18.9725 2.22164 17.7498H6.25Z" fill="#ffffff"></path> </g></svg>
+		</button>
+		</div>
+
+		<div class="fixed-box2">
+
+		<button onclick="javascript:location.href='https://github.com/chen08209/FlClash/releases/download/v0.8.61/FlClash-0.8.61-android-arm64-v8a.apk'"> دانلود برنامه FlClash </button>
+		<button onclick="javascript:location.href='clash://install-config?url={{ user.subscription_url }}'"> افزودن لینک هوشمند</button>
+		<button style="padding:10px 0 0;" onclick="showPopup('path/to/video1.mp4')">
+		<svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M11.25 2C9.88382 2.00133 8.73117 2.01015 7.75 2.0685V6.24976H11.25V2Z" fill="#ffffff"></path> <path d="M6.25 2.2214C5.02727 2.41566 4.1485 2.78019 3.46447 3.46423C2.78043 4.14826 2.4159 5.02703 2.22164 6.24976H6.25V2.2214Z" fill="#ffffff"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M2 11.9998C2 10.2993 2 8.90556 2.06874 7.74976L21.9313 7.74976C22 8.90556 22 10.2993 22 11.9998C22 13.7002 22 15.094 21.9313 16.2498L2.06874 16.2498C2 15.094 2 13.7002 2 11.9998ZM12.4112 10.4043C13.4704 11.1162 14 11.4722 14 12C14 12.5278 13.4704 12.8838 12.4112 13.5957C11.3375 14.3173 10.8006 14.6781 10.4003 14.4132C10 14.1483 10 13.4322 10 12C10 10.5678 10 9.85174 10.4003 9.58682C10.8006 9.3219 11.3375 9.68271 12.4112 10.4043Z" fill="#ffffff"></path> <path d="M21.7784 6.24976C21.5841 5.02703 21.2196 4.14826 20.5355 3.46423C19.8515 2.78019 18.9727 2.41566 17.75 2.2214V6.24976H21.7784Z" fill="#ffffff"></path> <path d="M12.75 2C14.1162 2.00133 15.2688 2.01015 16.25 2.0685V6.24976H12.75V2Z" fill="#ffffff"></path> <path d="M21.7784 17.7498H17.75V21.7781C18.9727 21.5839 19.8515 21.2193 20.5355 20.5353C21.2196 19.8513 21.5841 18.9725 21.7784 17.7498Z" fill="#ffffff"></path> <path d="M16.25 17.7498V21.931C15.2688 21.9894 14.1162 21.9982 12.75 21.9995V17.7498H16.25Z" fill="#ffffff"></path> <path d="M11.25 21.9995V17.7498H7.75L7.75 21.931C8.73117 21.9894 9.88382 21.9982 11.25 21.9995Z" fill="#ffffff"></path> <path d="M6.25 17.7498L6.25 21.7781C5.02727 21.5839 4.1485 21.2193 3.46447 20.5353C2.78043 19.8513 2.4159 18.9725 2.22164 17.7498H6.25Z" fill="#ffffff"></path> </g></svg>
+		</button>
+		</div>
+
+		<div class="fixed-box2">
+
+		<button onclick="javascript:location.href='https://github.com/SagerNet/sing-box/releases/download/v1.10.0-beta.10/SFA-1.10.0-beta.10-universal.apk'"> دانلود برنامه Sing-box </button>
+		<button onclick="javascript:location.href='sing-box://import-remote-profile?url={{ user.subscription_url }}#Marz'"> افزودن لینک هوشمند </button>
+		<button style="padding:10px 0 0;" onclick="showPopup('path/to/video1.mp4')">
+		<svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M11.25 2C9.88382 2.00133 8.73117 2.01015 7.75 2.0685V6.24976H11.25V2Z" fill="#ffffff"></path> <path d="M6.25 2.2214C5.02727 2.41566 4.1485 2.78019 3.46447 3.46423C2.78043 4.14826 2.4159 5.02703 2.22164 6.24976H6.25V2.2214Z" fill="#ffffff"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M2 11.9998C2 10.2993 2 8.90556 2.06874 7.74976L21.9313 7.74976C22 8.90556 22 10.2993 22 11.9998C22 13.7002 22 15.094 21.9313 16.2498L2.06874 16.2498C2 15.094 2 13.7002 2 11.9998ZM12.4112 10.4043C13.4704 11.1162 14 11.4722 14 12C14 12.5278 13.4704 12.8838 12.4112 13.5957C11.3375 14.3173 10.8006 14.6781 10.4003 14.4132C10 14.1483 10 13.4322 10 12C10 10.5678 10 9.85174 10.4003 9.58682C10.8006 9.3219 11.3375 9.68271 12.4112 10.4043Z" fill="#ffffff"></path> <path d="M21.7784 6.24976C21.5841 5.02703 21.2196 4.14826 20.5355 3.46423C19.8515 2.78019 18.9727 2.41566 17.75 2.2214V6.24976H21.7784Z" fill="#ffffff"></path> <path d="M12.75 2C14.1162 2.00133 15.2688 2.01015 16.25 2.0685V6.24976H12.75V2Z" fill="#ffffff"></path> <path d="M21.7784 17.7498H17.75V21.7781C18.9727 21.5839 19.8515 21.2193 20.5355 20.5353C21.2196 19.8513 21.5841 18.9725 21.7784 17.7498Z" fill="#ffffff"></path> <path d="M16.25 17.7498V21.931C15.2688 21.9894 14.1162 21.9982 12.75 21.9995V17.7498H16.25Z" fill="#ffffff"></path> <path d="M11.25 21.9995V17.7498H7.75L7.75 21.931C8.73117 21.9894 9.88382 21.9982 11.25 21.9995Z" fill="#ffffff"></path> <path d="M6.25 17.7498L6.25 21.7781C5.02727 21.5839 4.1485 21.2193 3.46447 20.5353C2.78043 19.8513 2.4159 18.9725 2.22164 17.7498H6.25Z" fill="#ffffff"></path> </g></svg>
+
+		</button>
+		</div>
+
+
+		<br>
+		`;
+		}
+
+		function getIphoneGuideContent() {
+		return `
+		<h2 style=" 
+background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 63%, rgba(0,0,0,1) 64%, rgba(255,255,255,0) 100%); ">راهنمای آیفون</h2>
+		<div class="fixed-box">
+		<p style="text-align:right;margin-right:10px;letter-spacing: 0.087em;">
+		1 - ابتدا روی دکمه دانلود ، برنامه مورد نظر خود کلیک کنید
+		</p>
+		<p style="text-align:right;margin-right:10px;letter-spacing: 0.087em;">   2 - سپس روی  <b style="color:#cb4335;font-size:17px;">افزودن لینک هوشمند </b>برنامه ای که نصب کرده اید کلیک کنید   </p>
+		 
+		</div>
+		<br>
+		<div class="fixed-box2">
+
+		<button onclick="javascript:location.href='https://apps.apple.com/us/app/v2box-v2ray-client/id6446814690'"> دانلود برنامه V2box </button>
+		<button onclick="javascript:location.href='v2box://install-sub?url={{ user.subscription_url }}&name=Marz'"> افزودن لینک هوشمند </button>
+		<button style="padding:10px 0 0;" onclick="showPopup('path/to/video1.mp4')">
+		<svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M11.25 2C9.88382 2.00133 8.73117 2.01015 7.75 2.0685V6.24976H11.25V2Z" fill="#ffffff"></path> <path d="M6.25 2.2214C5.02727 2.41566 4.1485 2.78019 3.46447 3.46423C2.78043 4.14826 2.4159 5.02703 2.22164 6.24976H6.25V2.2214Z" fill="#ffffff"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M2 11.9998C2 10.2993 2 8.90556 2.06874 7.74976L21.9313 7.74976C22 8.90556 22 10.2993 22 11.9998C22 13.7002 22 15.094 21.9313 16.2498L2.06874 16.2498C2 15.094 2 13.7002 2 11.9998ZM12.4112 10.4043C13.4704 11.1162 14 11.4722 14 12C14 12.5278 13.4704 12.8838 12.4112 13.5957C11.3375 14.3173 10.8006 14.6781 10.4003 14.4132C10 14.1483 10 13.4322 10 12C10 10.5678 10 9.85174 10.4003 9.58682C10.8006 9.3219 11.3375 9.68271 12.4112 10.4043Z" fill="#ffffff"></path> <path d="M21.7784 6.24976C21.5841 5.02703 21.2196 4.14826 20.5355 3.46423C19.8515 2.78019 18.9727 2.41566 17.75 2.2214V6.24976H21.7784Z" fill="#ffffff"></path> <path d="M12.75 2C14.1162 2.00133 15.2688 2.01015 16.25 2.0685V6.24976H12.75V2Z" fill="#ffffff"></path> <path d="M21.7784 17.7498H17.75V21.7781C18.9727 21.5839 19.8515 21.2193 20.5355 20.5353C21.2196 19.8513 21.5841 18.9725 21.7784 17.7498Z" fill="#ffffff"></path> <path d="M16.25 17.7498V21.931C15.2688 21.9894 14.1162 21.9982 12.75 21.9995V17.7498H16.25Z" fill="#ffffff"></path> <path d="M11.25 21.9995V17.7498H7.75L7.75 21.931C8.73117 21.9894 9.88382 21.9982 11.25 21.9995Z" fill="#ffffff"></path> <path d="M6.25 17.7498L6.25 21.7781C5.02727 21.5839 4.1485 21.2193 3.46447 20.5353C2.78043 19.8513 2.4159 18.9725 2.22164 17.7498H6.25Z" fill="#ffffff"></path> </g></svg>
+		</button>
+		</div>
+
+		<div class="fixed-box2">
+
+		<button onclick="javascript:location.href='https://apps.apple.com/us/app/streisand/id6450534064'"> دانلود برنامه Streisand </button>
+		<button onclick="javascript:location.href='streisand://import/{{ user.subscription_url }}#Marz'"> افزودن لینک هوشمند </button>
+		<button style="padding:10px 0 0;" onclick="showPopup('path/to/video1.mp4')">
+		<svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M11.25 2C9.88382 2.00133 8.73117 2.01015 7.75 2.0685V6.24976H11.25V2Z" fill="#ffffff"></path> <path d="M6.25 2.2214C5.02727 2.41566 4.1485 2.78019 3.46447 3.46423C2.78043 4.14826 2.4159 5.02703 2.22164 6.24976H6.25V2.2214Z" fill="#ffffff"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M2 11.9998C2 10.2993 2 8.90556 2.06874 7.74976L21.9313 7.74976C22 8.90556 22 10.2993 22 11.9998C22 13.7002 22 15.094 21.9313 16.2498L2.06874 16.2498C2 15.094 2 13.7002 2 11.9998ZM12.4112 10.4043C13.4704 11.1162 14 11.4722 14 12C14 12.5278 13.4704 12.8838 12.4112 13.5957C11.3375 14.3173 10.8006 14.6781 10.4003 14.4132C10 14.1483 10 13.4322 10 12C10 10.5678 10 9.85174 10.4003 9.58682C10.8006 9.3219 11.3375 9.68271 12.4112 10.4043Z" fill="#ffffff"></path> <path d="M21.7784 6.24976C21.5841 5.02703 21.2196 4.14826 20.5355 3.46423C19.8515 2.78019 18.9727 2.41566 17.75 2.2214V6.24976H21.7784Z" fill="#ffffff"></path> <path d="M12.75 2C14.1162 2.00133 15.2688 2.01015 16.25 2.0685V6.24976H12.75V2Z" fill="#ffffff"></path> <path d="M21.7784 17.7498H17.75V21.7781C18.9727 21.5839 19.8515 21.2193 20.5355 20.5353C21.2196 19.8513 21.5841 18.9725 21.7784 17.7498Z" fill="#ffffff"></path> <path d="M16.25 17.7498V21.931C15.2688 21.9894 14.1162 21.9982 12.75 21.9995V17.7498H16.25Z" fill="#ffffff"></path> <path d="M11.25 21.9995V17.7498H7.75L7.75 21.931C8.73117 21.9894 9.88382 21.9982 11.25 21.9995Z" fill="#ffffff"></path> <path d="M6.25 17.7498L6.25 21.7781C5.02727 21.5839 4.1485 21.2193 3.46447 20.5353C2.78043 19.8513 2.4159 18.9725 2.22164 17.7498H6.25Z" fill="#ffffff"></path> </g></svg>
+		</button>
+		</div>
+
+		<div class="fixed-box2">
+
+		<button onclick="javascript:location.href='https://apps.apple.com/us/app/foxray/id6448898396'"> دانلود برنامه FoxRay </button>
+		<button onclick="javascript:location.href='foxray://yiguo.dev/sub/add/?url={{ user.subscription_url }}#Marz'"> افزودن لینک هوشمند </button>
+		<button style="padding:10px 0 0;" onclick="showPopup('path/to/video1.mp4')">
+		<svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M11.25 2C9.88382 2.00133 8.73117 2.01015 7.75 2.0685V6.24976H11.25V2Z" fill="#ffffff"></path> <path d="M6.25 2.2214C5.02727 2.41566 4.1485 2.78019 3.46447 3.46423C2.78043 4.14826 2.4159 5.02703 2.22164 6.24976H6.25V2.2214Z" fill="#ffffff"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M2 11.9998C2 10.2993 2 8.90556 2.06874 7.74976L21.9313 7.74976C22 8.90556 22 10.2993 22 11.9998C22 13.7002 22 15.094 21.9313 16.2498L2.06874 16.2498C2 15.094 2 13.7002 2 11.9998ZM12.4112 10.4043C13.4704 11.1162 14 11.4722 14 12C14 12.5278 13.4704 12.8838 12.4112 13.5957C11.3375 14.3173 10.8006 14.6781 10.4003 14.4132C10 14.1483 10 13.4322 10 12C10 10.5678 10 9.85174 10.4003 9.58682C10.8006 9.3219 11.3375 9.68271 12.4112 10.4043Z" fill="#ffffff"></path> <path d="M21.7784 6.24976C21.5841 5.02703 21.2196 4.14826 20.5355 3.46423C19.8515 2.78019 18.9727 2.41566 17.75 2.2214V6.24976H21.7784Z" fill="#ffffff"></path> <path d="M12.75 2C14.1162 2.00133 15.2688 2.01015 16.25 2.0685V6.24976H12.75V2Z" fill="#ffffff"></path> <path d="M21.7784 17.7498H17.75V21.7781C18.9727 21.5839 19.8515 21.2193 20.5355 20.5353C21.2196 19.8513 21.5841 18.9725 21.7784 17.7498Z" fill="#ffffff"></path> <path d="M16.25 17.7498V21.931C15.2688 21.9894 14.1162 21.9982 12.75 21.9995V17.7498H16.25Z" fill="#ffffff"></path> <path d="M11.25 21.9995V17.7498H7.75L7.75 21.931C8.73117 21.9894 9.88382 21.9982 11.25 21.9995Z" fill="#ffffff"></path> <path d="M6.25 17.7498L6.25 21.7781C5.02727 21.5839 4.1485 21.2193 3.46447 20.5353C2.78043 19.8513 2.4159 18.9725 2.22164 17.7498H6.25Z" fill="#ffffff"></path> </g></svg>
+		</button>
+		</div>
+
+		<div class="fixed-box2">
+
+		<button class="button-2" onclick="javascript:location.href='https://apps.apple.com/us/app/sing-box-vt/id6673731168'"> دانلود برنامه Sing-box ( پیشنهاد ما )</button>
+		<button onclick="javascript:location.href='sing-box://import-remote-profile?url={{ user.subscription_url }}#Marz'"> افزودن لینک هوشمند </button>
+		<button style="padding:10px 0 0;" onclick="showPopup('path/to/video1.mp4')">
+		<svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M11.25 2C9.88382 2.00133 8.73117 2.01015 7.75 2.0685V6.24976H11.25V2Z" fill="#ffffff"></path> <path d="M6.25 2.2214C5.02727 2.41566 4.1485 2.78019 3.46447 3.46423C2.78043 4.14826 2.4159 5.02703 2.22164 6.24976H6.25V2.2214Z" fill="#ffffff"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M2 11.9998C2 10.2993 2 8.90556 2.06874 7.74976L21.9313 7.74976C22 8.90556 22 10.2993 22 11.9998C22 13.7002 22 15.094 21.9313 16.2498L2.06874 16.2498C2 15.094 2 13.7002 2 11.9998ZM12.4112 10.4043C13.4704 11.1162 14 11.4722 14 12C14 12.5278 13.4704 12.8838 12.4112 13.5957C11.3375 14.3173 10.8006 14.6781 10.4003 14.4132C10 14.1483 10 13.4322 10 12C10 10.5678 10 9.85174 10.4003 9.58682C10.8006 9.3219 11.3375 9.68271 12.4112 10.4043Z" fill="#ffffff"></path> <path d="M21.7784 6.24976C21.5841 5.02703 21.2196 4.14826 20.5355 3.46423C19.8515 2.78019 18.9727 2.41566 17.75 2.2214V6.24976H21.7784Z" fill="#ffffff"></path> <path d="M12.75 2C14.1162 2.00133 15.2688 2.01015 16.25 2.0685V6.24976H12.75V2Z" fill="#ffffff"></path> <path d="M21.7784 17.7498H17.75V21.7781C18.9727 21.5839 19.8515 21.2193 20.5355 20.5353C21.2196 19.8513 21.5841 18.9725 21.7784 17.7498Z" fill="#ffffff"></path> <path d="M16.25 17.7498V21.931C15.2688 21.9894 14.1162 21.9982 12.75 21.9995V17.7498H16.25Z" fill="#ffffff"></path> <path d="M11.25 21.9995V17.7498H7.75L7.75 21.931C8.73117 21.9894 9.88382 21.9982 11.25 21.9995Z" fill="#ffffff"></path> <path d="M6.25 17.7498L6.25 21.7781C5.02727 21.5839 4.1485 21.2193 3.46447 20.5353C2.78043 19.8513 2.4159 18.9725 2.22164 17.7498H6.25Z" fill="#ffffff"></path> </g></svg>
+		</button>
+		</div>
+		<br>
+		`;
+		}
+
+		function getWindowsGuideContent() {
+		return `
+		<h2 style=" background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 63%, rgba(0,0,0,1) 64%, rgba(255,255,255,0) 100%); ">راهنمای ویندوز</h2>
+		<div class="fixed-box">
+		<p style="text-align:right;margin-right:10px;letter-spacing: 0.087em;">
+		1 - ابتدا روی دکمه دانلود ، برنامه مورد نظر خود کلیک کنید
+		</p>
+		<p style="text-align:right;margin-right:10px;letter-spacing: 0.087em;">   2 - سپس روی  <b style="color:#cb4335;font-size:17px;">افزودن لینک هوشمند </b>برنامه ای که نصب کرده اید کلیک کنید   </p>
+		 
+		</div>
+		<br>
+		<div class="fixed-box2">
+
+		<button onclick="javascript:location.href='https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Windows-Portable-x64.zip'"> دانلود برنامه Hiddify </button>
+		<button onclick="javascript:location.href='hiddify://install-config/?url={{ user.subscription_url }}'"> افزودن لینک هوشمند </button>
+		<button style="padding:10px 0 0;" onclick="showPopup('path/to/video1.mp4')">
+		<svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M11.25 2C9.88382 2.00133 8.73117 2.01015 7.75 2.0685V6.24976H11.25V2Z" fill="#ffffff"></path> <path d="M6.25 2.2214C5.02727 2.41566 4.1485 2.78019 3.46447 3.46423C2.78043 4.14826 2.4159 5.02703 2.22164 6.24976H6.25V2.2214Z" fill="#ffffff"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M2 11.9998C2 10.2993 2 8.90556 2.06874 7.74976L21.9313 7.74976C22 8.90556 22 10.2993 22 11.9998C22 13.7002 22 15.094 21.9313 16.2498L2.06874 16.2498C2 15.094 2 13.7002 2 11.9998ZM12.4112 10.4043C13.4704 11.1162 14 11.4722 14 12C14 12.5278 13.4704 12.8838 12.4112 13.5957C11.3375 14.3173 10.8006 14.6781 10.4003 14.4132C10 14.1483 10 13.4322 10 12C10 10.5678 10 9.85174 10.4003 9.58682C10.8006 9.3219 11.3375 9.68271 12.4112 10.4043Z" fill="#ffffff"></path> <path d="M21.7784 6.24976C21.5841 5.02703 21.2196 4.14826 20.5355 3.46423C19.8515 2.78019 18.9727 2.41566 17.75 2.2214V6.24976H21.7784Z" fill="#ffffff"></path> <path d="M12.75 2C14.1162 2.00133 15.2688 2.01015 16.25 2.0685V6.24976H12.75V2Z" fill="#ffffff"></path> <path d="M21.7784 17.7498H17.75V21.7781C18.9727 21.5839 19.8515 21.2193 20.5355 20.5353C21.2196 19.8513 21.5841 18.9725 21.7784 17.7498Z" fill="#ffffff"></path> <path d="M16.25 17.7498V21.931C15.2688 21.9894 14.1162 21.9982 12.75 21.9995V17.7498H16.25Z" fill="#ffffff"></path> <path d="M11.25 21.9995V17.7498H7.75L7.75 21.931C8.73117 21.9894 9.88382 21.9982 11.25 21.9995Z" fill="#ffffff"></path> <path d="M6.25 17.7498L6.25 21.7781C5.02727 21.5839 4.1485 21.2193 3.46447 20.5353C2.78043 19.8513 2.4159 18.9725 2.22164 17.7498H6.25Z" fill="#ffffff"></path> </g></svg>
+		</button>
+		</div>
+
+		<div class="fixed-box2">
+
+		<button class="button-2" onclick="javascript:location.href='https://github.com/chen08209/FlClash/releases/download/v0.8.61/FlClash-0.8.61-windows-amd64.zip'"> دانلود برنامه FlClash ( پیشنهاد ما )</button>
+		<button onclick="javascript:location.href='clash://install-config?url={{ user.subscription_url }}'"> افزودن لینک هوشمند </button>
+		<button style="padding:10px 0 0;" onclick="showPopup('path/to/video1.mp4')">
+		<svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M11.25 2C9.88382 2.00133 8.73117 2.01015 7.75 2.0685V6.24976H11.25V2Z" fill="#ffffff"></path> <path d="M6.25 2.2214C5.02727 2.41566 4.1485 2.78019 3.46447 3.46423C2.78043 4.14826 2.4159 5.02703 2.22164 6.24976H6.25V2.2214Z" fill="#ffffff"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M2 11.9998C2 10.2993 2 8.90556 2.06874 7.74976L21.9313 7.74976C22 8.90556 22 10.2993 22 11.9998C22 13.7002 22 15.094 21.9313 16.2498L2.06874 16.2498C2 15.094 2 13.7002 2 11.9998ZM12.4112 10.4043C13.4704 11.1162 14 11.4722 14 12C14 12.5278 13.4704 12.8838 12.4112 13.5957C11.3375 14.3173 10.8006 14.6781 10.4003 14.4132C10 14.1483 10 13.4322 10 12C10 10.5678 10 9.85174 10.4003 9.58682C10.8006 9.3219 11.3375 9.68271 12.4112 10.4043Z" fill="#ffffff"></path> <path d="M21.7784 6.24976C21.5841 5.02703 21.2196 4.14826 20.5355 3.46423C19.8515 2.78019 18.9727 2.41566 17.75 2.2214V6.24976H21.7784Z" fill="#ffffff"></path> <path d="M12.75 2C14.1162 2.00133 15.2688 2.01015 16.25 2.0685V6.24976H12.75V2Z" fill="#ffffff"></path> <path d="M21.7784 17.7498H17.75V21.7781C18.9727 21.5839 19.8515 21.2193 20.5355 20.5353C21.2196 19.8513 21.5841 18.9725 21.7784 17.7498Z" fill="#ffffff"></path> <path d="M16.25 17.7498V21.931C15.2688 21.9894 14.1162 21.9982 12.75 21.9995V17.7498H16.25Z" fill="#ffffff"></path> <path d="M11.25 21.9995V17.7498H7.75L7.75 21.931C8.73117 21.9894 9.88382 21.9982 11.25 21.9995Z" fill="#ffffff"></path> <path d="M6.25 17.7498L6.25 21.7781C5.02727 21.5839 4.1485 21.2193 3.46447 20.5353C2.78043 19.8513 2.4159 18.9725 2.22164 17.7498H6.25Z" fill="#ffffff"></path> </g></svg>
+		</button>
+		</div>
+
+
+		
+		<br>
+		`;
+		}
+
+		function getusermoreGuideContent() {
+		return `
+
+		`;
+		}
+
+		
+		function changeContent(contentNumber) {
+		const contentBox = document.getElementById('content-box');
+
+		
+		let contentHTML;
+		switch (contentNumber) {
+		case 1:
+		contentHTML = getUserDetailsContent();
+		break;
+		case 2:
+		contentHTML = getAndroidGuideContent();
+		break;
+		case 3:
+		contentHTML = getIphoneGuideContent();
+		break;
+		case 4:
+		contentHTML = getWindowsGuideContent();
+		break;
+
+		default:
+		contentHTML = '<p>محتوایی موجود نیست</p>';
+		}
+
+		
+		contentBox.innerHTML = contentHTML;
+
+		document.querySelector('.nav').scrollIntoView({ behavior: 'smooth', block: 'end' });
+
+		// Remove 'active' class from all SVGs
+		icons.forEach(icon => icon.classList.remove('active'));
+
+		// Add 'active' class to the clicked SVG
+		document.getElementById('icon' + contentNumber).classList.add('active');
+		}
+
+		function showPopup(videoSrc) {
+		const popup = document.getElementById('popup');
+		const video = document.getElementById('popup-video');
+
+		
+		video.src = videoSrc;
+
+		
+		popup.style.display = 'block';
+		}
+
+		function closePopup() {
+		const popup = document.getElementById('popup');
+		const video = document.getElementById('popup-video');
+
+		
+		video.pause();
+		popup.style.display = 'none';
+		}
+		</script>
+
+		<script>
+		
+		function showHoshdar(message) {
+		const hoshdar = document.getElementById("hoshdar");
+		hoshdar.textContent = message;
+		hoshdar.classList.add("show");
+		hoshdar.style.display = "block";
+		
+		setTimeout(() => {
+			hoshdar.classList.remove("show");
+			setTimeout(() => {
+				hoshdar.style.display = "none";
+			}, 500); 
+		}, 3000); 
+		}
+
+	function copyAllConfigs() {
+		const configs = `{% for link in user.links %}{{ link }}{% if not loop.last %}\n{% endif %}{% endfor %}`;
+		navigator.clipboard.writeText(configs).then(() => {
+			showHoshdar("تمام کانفیگ ها به صورت جداگانه کپی شدند");
+		}, err => {
+			showHoshdar("خطا در کپی کردن کانفیگ ها");
+		});
+		}
+
+	function copySubscriptionLink() {
+		const subscriptionUrl = "{{ user.subscription_url }}";
+		navigator.clipboard.writeText(subscriptionUrl).then(() => {
+			showHoshdar("لینک اشتراک کپی شد");
+		}, err => {
+			showHoshdar("خطا در کپی کردن لینک اشتراک");
+		});
+		}
+
+
+		function showQrCodePopup() {
+		const subscriptionUrl = "{{ user.subscription_url }}";
+		const qrCodeElement = document.getElementById('qrcode');
+
+		
+		qrCodeElement.innerHTML = "";
+
+		
+		const qrCode = new QRCode(qrCodeElement, {
+		text: subscriptionUrl,
+		width: 250,  
+		height: 250, 
+		correctLevel: QRCode.CorrectLevel.H
+		});
+
+		
+		document.getElementById('popup').style.display = 'block';
+		}
+
+		function closePopup() {
+		
+		document.getElementById('popup').style.display = 'none';
+		}
+
+		function saveQrCode() {
+		
+		const qrCodeImage = document.querySelector('#qrcode img').src;
+
+		
+		const a = document.createElement('a');
+		a.href = qrCodeImage;
+		a.download = 'subscription_qr_code.png';
+		document.body.appendChild(a);
+		a.click();  
+		document.body.removeChild(a);  
+		}
+
+
+
+
+
+
+		</script>
+		<script>
+  
+    const user = {
+        username: "{{ user.username }}", 
+        status: { value: "{{ user.status.value }}" } 
+    };
+
+    function openPopuper() {
+        document.getElementById('POPUPER').classList.add('active');
+        document.getElementById('overlay').classList.add('active');
+    }
+
+    function closePopuper() {
+        document.getElementById('POPUPER').classList.remove('active');
+        document.getElementById('overlay').classList.remove('active');
+    }
+
+    function sendTelegramRequest() {
+        const token = 'توکن';
+        const chatId = 'آیدی';
+        const username = user.username;
+        const today = new Date().toLocaleDateString('fa-IR'); 
+        const message = `کاربر #${username} درخواست اضطراری در تاریخ ${today} دارد.`;
+
+        const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    alert('درخواست با موفقیت ارسال شد');
+                    closePopuper();
+                } else {
+                    alert('خطا در ارسال درخواست');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('خطا در ارسال درخواست');
+            });
+    }
+
+    
+    if (user.status.value === "expired" || user.status.value === "limited") {
+        openPopuper(); 
+    } else {
+        console.log("کاربر مجاز به دیدن این پاپ آپ نیست.");
+    }
+
+	</script>
+
+   <script>
+        function updateProgressBar(percentage) {
+            const progressBar = document.getElementById('progress-bar');
+            const percentageText = document.getElementById('percentage');
+
+          
+            progressBar.style.width = percentage + '%';
+
+           
+            percentageText.textContent = percentage + '%';
+        }
+
+       
+        const userUsedTraffic = {{ user.used_traffic }};
+        const userDataLimit = {% if not user.data_limit %}Infinity{% else %}{{ user.data_limit }}{% endif %};
+
+    
+        const percentageUsed = Math.round((userUsedTraffic / userDataLimit) * 100);
+
+       
+        updateProgressBar(percentageUsed);
+    </script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var userAgent = navigator.userAgent.toLowerCase();
+			
+		
+			document.getElementById("icon1").parentElement.style.display = "block";
+
+		
+			var navItems = document.querySelectorAll(".nav-item");
+			navItems.forEach(function(item) {
+				if (item.querySelector("svg").id !== "icon1") {
+					item.style.display = "none";
+				}
+			});
+
+		
+			if (userAgent.indexOf("android") > -1) {
+			
+				document.getElementById("icon2").parentElement.style.display = "block";
+			} else if (userAgent.indexOf("iphone") > -1 || userAgent.indexOf("ipad") > -1 || userAgent.indexOf("mac") > -1) {
+			
+				document.getElementById("icon3").parentElement.style.display = "block";
+			} else if (userAgent.indexOf("windows") > -1) {
+
+				document.getElementById("icon4").parentElement.style.display = "block";
+			} else {
+			 
+				document.getElementById("icon1").parentElement.style.display = "block";
+			}
+		});
+	</script>
+	
+	</body>
+	</html>
